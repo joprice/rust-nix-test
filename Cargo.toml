@@ -1,0 +1,21 @@
+[package]
+name = "client"
+version = "0.1.0"
+authors = ["Joseph Price <pricejosephd@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+tonic = "0.3.1"
+prost = "0.6.1"
+tokio = { version = "0.2.11", features = ["macros"] }
+rodio = "0.12.0"
+cpal = "*"
+hound = "3.4.0"
+futures = "0.3.4"
+futures-util = "0.3.4"
+
+[build-dependencies]
+tonic-build = "0.3.1"
+
+[patch.crates-io]
+cpal = { git = "https://github.com/RustAudio/cpal.git", rev = "cb49e4446c3fd1d5ea7af624905d8f3da4de9356" }
